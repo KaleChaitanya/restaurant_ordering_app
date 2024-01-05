@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+  max-width: 100%;
+  padding: 30px 0;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  color: #ffffff;
+}
+
+header h2,
+h3 {
+  margin: 0 0 0 46px;
+}
+
+.menu-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px auto 0 auto;
+  width: 508px;
+  height: 140px;
+  border-bottom: 1px solid gray;
+}
+
+.left,
+.center,
+.right {
+  padding: 10px;
+}
+
+.left {
+  flex: 0 0 auto;
+}
+
+.center {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.right {
+  flex: 0 0 auto;
+}
+.food-img {
+  font-size: 3rem;
+}
+
+.center h3,
+p,
+h5 {
+  margin: 0;
+  padding: 5px 0;
+}
+.menu-card button {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: white;
+  font-size: large;
+  border-radius: 50%;
+}
+button:hover {
+  cursor: pointer;
+  background-color: gray;
+}
+
+.order {
+  /* border: 2px solid red; */
+  border-bottom: 2px solid black;
+  width: 508px;
+  height: 320px;
+  margin: 30px auto 0 auto;
+}
+.order h2 {
+  text-align: center;
+}
+.order-div {
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-name,
+.remove-order,
+.order-price {
+  padding: 10px;
+}
+
+.order-name {
+  flex: 0 0 auto;
+}
+
+.remove-order {
+  /* border: 2px solid orange; */
+  flex: 1 1 auto;
+  text-align: left;
+  color: #bbbbbb;
+  font-size: small;
+}
+.remove-order p:hover {
+  cursor: pointer;
+  color: red;
+}
+.order-price {
+  flex: 0 0 auto;
+}
+
+.main-total {
+  display: flex;
+  flex-direction: column;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 5px solid palevioletred; */
+}
+.total-price-heading {
+  flex: 1 0 auto;
+  /* border: 5px solid peru; */
+}
+.total-price {
+  flex: 0 1 auto;
+  /* border: 5px solid plum; */
+}
+
+.main-total .order-btn {
+  margin: 0 auto;
+  width: 500px;
+  border: none;
+  background-color: #16db99;
+  border-radius: 3px;
+  padding: 5px;
+  color: white;
+}
