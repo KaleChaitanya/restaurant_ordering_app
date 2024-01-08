@@ -1,12 +1,9 @@
 import { menuArray } from './data.js'
 
-let itemArray = []
-let paymentModal = document.querySelector('.payment-modal')
-let totalPriceNumber = document.querySelector('.total-price-number')
-let buyItems = document.querySelector('.buy-items')
-let submitOrderBtn = document.querySelector('.submit-order-btn')
-let userDetailsModal = document.querySelector('.user-details-modal')
-let paymentForm = document.querySelector('#payment-form')
+const paymentModal = document.querySelector('.payment-modal')
+const totalPriceNumber = document.querySelector('.total-price-number')
+const buyItems = document.querySelector('.buy-items')
+const userDetailsModal = document.querySelector('.user-details-modal')
 
 document.addEventListener("click", function (e) {
   // add items
@@ -31,24 +28,26 @@ document.addEventListener("click", function (e) {
   }
 })
 
+const submitOrderBtn = document.querySelector('.submit-order-btn')
 submitOrderBtn.addEventListener("click", function () {
   userDetailsModal.style.display = "flex"
 })
+
+let paymentForm = document.querySelector('#payment-form')
 paymentForm.addEventListener("submit", function (e) {
   e.preventDefault()
-  let userName = document.querySelector('#user-name')
-  let userCardNumber = document.querySelector('#user-card-number')
-  let userCvv = document.querySelector("#user-cvv")
-  let userMessage = document.querySelector('.user-message')
-
+  const userName = document.querySelector('#user-name')
+  const userCardNumber = document.querySelector('#user-card-number')
+  const userCvv = document.querySelector("#user-cvv")
+  const userMessage = document.querySelector('.user-message')
   userMessage.textContent = `Thanks,${userName.value}!Your order is on its way`
-  // alert(userName.value)
   userDetailsModal.style.display = 'none'
   paymentModal.style.display = 'none'
   userName.value = ''
   userCardNumber.value = ''
   userCvv.value = ''
 })
+
 let getHtml = ''
 function getMenuArray() {
   menuArray.map(function (menu) {
@@ -70,26 +69,6 @@ function getMenuArray() {
   })
   return getHtml;
 }
-
-
-
-function handleItemBtnClick(itemId) {
-
-  let renderHtml = ``
-
-  const targetMenuObj = menuArray.filter(function (item) {
-    return item.id == itemId
-  })[0]
-
-  itemArray.push({
-    itemId: targetMenuObj.id,
-    itemName: targetMenuObj.name,
-    itemPrice: targetMenuObj.price
-  })
-  // console.log(itemArray)
-  displayObjects()
-}
-
 
 let buyItemsArray = []
 
@@ -137,39 +116,10 @@ function renderBuyItem(array) {
     index += 1
   })
   buyItems.innerHTML = itemsHTML.join('')
-
   paymentModal.style.display = 'flex'
 }
 
 function render() {
   document.querySelector('.menu-items').innerHTML = getMenuArray()
 }
-
 render()
-
-
-
-
-{/* <h2>Your Oder</h2>
-      <div class="order-div">
-        <div class="order-name">
-          <h4>Pizza</h4>
-        </div>
-        <div class="remove-order">
-          <p>remove</p>
-        </div>
-        <div class="order-price">
-          <h6>$14</h6>
-        </div>
-      </div>
-      <div class="main-total">
-        <div class="total">
-          <div class="total-price-heading">
-            <h3>Total price:</h3>
-          </div>
-          <div class="total-price">
-            <h4>$26</h4>
-          </div>
-        </div>
-        <button class="order-btn">Complete order</button>
-      </div> */}
