@@ -67,7 +67,7 @@ button:hover {
   background-color: gray;
 }
 
-.order {
+#order {
   /* border: 2px solid red; */
   border-bottom: 2px solid black;
   width: 508px;
@@ -135,4 +135,22 @@ button:hover {
   border-radius: 3px;
   padding: 5px;
   color: white;
+}
+ul {
+  list-style-type: none;
+}
+.displayItems {
+  display: flex;
+  /* justify-content: space-around; */
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+li {
+  padding: 10px;
+}
+.payment-modal {
+  display: none;
+}
+.user-details-modal{
+  display: none;
 }

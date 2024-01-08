@@ -11,31 +11,56 @@
       <h2>Jimmy’s Diner</h2>
       <h3>The best burgers and pizzas in town.</h3>
     </header>
-    <div class="container"></div>
-    <div class="order">
-      <h2>Your Oder</h2>
-      <div class="order-div">
-        <div class="order-name">
-          <h4>Pizza</h4>
-        </div>
-        <div class="remove-order">
-          <p>remove</p>
-        </div>
-        <div class="order-price">
-          <h6>$14</h6>
+
+    <section>
+      <div class="container">
+        <div id="menu-items" class="menu-items"></div>
+      </div>
+
+      <div class="container">
+        <div class="payment-modal" id="payment-modal">
+          <div class="container">
+            <h4 class="your-order-text">Your order</h4>
+
+            <div class="buy-items" id="buy-items"></div>
+
+            <div class="black-line"></div>
+            <div class="total-prices">
+              <p class="total-price">Total price:</p>
+              <div class="total-price-number" id="total-price-number"></div>
+            </div>
+            <button class="submit-order-btn" id="submit-order-btn">
+              Complete Order
+            </button>
+          </div>
         </div>
       </div>
-      <div class="main-total">
-        <div class="total">
-          <div class="total-price-heading">
-            <h3>Total price:</h3>
-          </div>
-          <div class="total-price">
-            <h4>$26</h4>
-          </div>
+    </section>
+    <div class="container">
+      <div class="user-details-modal" id="user-details-modal">
+        <div>
+          <form class="payment-form" id="payment-form">
+            <h2>Enter card details</h2>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              id="user-name"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Enter card number"
+              id="user-card-number"
+              required
+            />
+            <input type="text" placeholder="Enter CVV" id="user-cvv" required />
+            <button>Pay</button>
+          </form>
         </div>
-        <button class="order-btn">Complete order</button>
       </div>
+    </div>
+    <div class="container">
+      <h3 class="user-message"></h3>
     </div>
     <script src="script.js" type="module"></script>
   </body>
